@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<Head> 
+    <meta charset="utf-8"/>
+    <title> Formulaire d'inscription </title>
+</Head>
+    <body>
+<form>
+    <ul>
+    <li>
+        <h4>Prénom</h4>
+        <input type="text" required name="Prénom" pattern="[A-Za-z]+">
+    </li>
+    <li>
+        <h4>Nom</h4>
+        <input type="text" required name="Nom" pattern="[A-Za-z]+">
+    </li>
+    <li>
+        <h4>Age</h4>
+        <input type="text" required id="Age" name="Age" pattern="[0-9]+" maxlength="2">
+    </li>
+    
+    <li>
+        <h4>Sexe</h4>
+        <input type="radio" id="Femme" name="sex" value="Femme">
+        <label for="Femme">Femme</label>
+    
+        <input type="radio" id="Homme" name="sex" value="Homme">
+        <label for="Homme">Homme</label>
+
+        <input type="radio" id="NBinaire" name="sex" value="NBinaire" checked>
+        <label for="NBinaire">Non Binaire</label>
+    </li>
+    <li>
+        <h4>Addresse Email</h4>
+        <input type="email" required name="email-address"/>
+    </li>
+    
+    <li>
+        <h4>Adresse postale</h4>
+        <input type="Text" required name="PostAdress"/>
+    </li>
+
+<li>
+    <h4>Code postal</h4>
+    <input type="text" name="ZipCode" required pattern="[0-9]+"  maxlength="5">
+</li>
+
+<li>
+    <h4>Ville</h4>
+    <input type="text" required name="Ville" pattern="[A-Za-z]+">
+</li>
+
+<li>
+    <h4>Métier exercé</h4>
+<label for="Metier-exerce"></label>
+<input list="Metiers-exerces" required id="Metier-exerce" name="metier-exerce"  onkeydown="return false" />
+    <datalist id="Metiers-exerces">
+        <option value="Developpeur Web">
+        <option value="Concepteur développeur d'applications">
+        <option value="Administrateur serveur">
+        <option value="Architect réseaux">
+        <option value="Chef de Projet">
+    </datalist>
+</li>
+<li>
+    <h4>Nationalité</h4>
+<label for="Nationalité"></label>
+<input list="Nationalités" id="Nationalité" required name="Nationalité"  onkeydown="return false" />
+    <datalist id="Nationalités">
+        <option value="Française">
+        <option value="Anglaise">
+        <option value="Marocaine">
+        <option value="Japonaise">
+        <option value="Américaine">
+    </datalist>
+</li>
+<li>
+    <h4>Date de naissance</h4>
+    <h6> vous devez avoir plus de 13ans pour vous inscrire !</h6>
+    <input type="date" required name="BirthDate" min="1991-08-06" max="2008-01-01">
+</li>
+
+<li>
+    <h4>Pays de naissance</h4>
+<label for="Pays"></label>
+<input list="LesPays" id="Pays" required name="Pays"  onkeydown="return false" />
+    <datalist id="LesPays">
+        <option value="France">
+        <option value="Angleterre">
+        <option value="Maroc">
+        <option value="Japon">
+        <option value="Amérique-Du-Nord">
+    </datalist>
+</li>
+
+
+<li>
+    <h4>Numéro de sécurité social</h4>
+    <input type="text" name="CodeSecu" required pattern="[0-9]+"  maxlength="13">
+</li>
+
+<li>
+    <h4>Numéro de passeport</h4>
+    <input type="text" name="ZipCode" required pattern="[0-9]+[A-Za-z]+"  maxlength="9">
+</li>
+<li>
+    <h4>Date de délivrance du passeport</h4>
+    <input type="date" required name="PassportDelivDate">
+</li>
+
+<li>
+    <h4>Date de validité du passeport</h4>
+    <input type="date" required name="PasseportValDate">
+</li>
+</ul>
+<input type="submit" value="Confirmer">
+</form>
+</body>
+</html>
