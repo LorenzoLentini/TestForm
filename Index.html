@@ -9,67 +9,67 @@
     <title> Formulaire d'inscription </title>
 </Head>
     <body>
-<form>
-    
-    <div>
-        <h4>Prénom</h4>
-        <input type="text" required name="Prénom" pattern="[A-Za-z]+">
-    </div>
-    <div>
-        <h4>Nom</h4>
-        <input type="text" required name="Nom" pattern="[A-Za-z]+">
-    </div>
-    <div>
-        <h4>Age</h4>
-        <input type="text" required id="Age" name="Age" pattern="[0-9]+" maxlength="2">
-    </div>
-    
-    <div>
-        <h4>Sexe</h4>
-        <input type="radio" id="Femme" name="sex" value="Femme">
-        <label for="Femme">Femme</label>
-    
-        <input type="radio" id="Homme" name="sex" value="Homme">
-        <label for="Homme">Homme</label>
 
-        <input type="radio" id="NBinaire" name="sex" value="NBinaire" checked>
-        <label for="NBinaire">Non Binaire</label>
+<form>
+<div id="npnm">
+    <div id="pnm">
+        <label id="pnmtitle">Prénom</label>
+        <input type="text" required name="Prenom" pattern="[A-Za-z]+">
+    </div>
+    <div id="nm">
+        <label  id="ntitle">Nom</label>
+        <input type="text" required name="Nom"  pattern="[A-Za-z]+">
+    </div>
+</div>
+    <div  id="Age">
+        <label id="agetitle">Age</label>
+        <input type="text" required id="age" name="Age" pattern="[0-9]+" maxlength="2">
+    </div>
+    
+    <div id="genreradios">
+        <label >Genre</label>
+        <input type="radio" id="Femme" name="genre" value="Femme">
+        <label >Femme</label>
+    
+        <input type="radio" id="Homme" name="genre" value="Homme">
+        <label >Homme</label>
+
+        <input type="radio" id="NBinaire" name="genre" value="NBinaire" checked>
+        <label >Non Binaire</label>
     </div>
     <div>
-        <h4>Addresse Email</h4>
+        <label >Addresse Email</label>
         <input type="email" required name="email-address"/>
     </div>
     
     <div>
-        <h4>Adresse postale</h4>
+        <label >Adresse postale</label>
         <input type="Text" required name="PostAdress"/>
     </div>
 
 <div>
-    <h4>Code postal</h4>
-    <input type="text" name="ZipCode" required pattern="[0-9]+"  maxlength="5">
+    <label >Code postal</label>
+    <input type="text" name="ZipCode" required pattern="[0-9]+" minlength="5" maxlength="5">
 </div>
 
 <div>
-    <h4>Ville</h4>
+    <label >Ville</label>
     <input type="text" required name="Ville" pattern="[A-Za-z]+">
 </div>
 
 <div>
-    <h4>Métier exercé</h4>
-    <input list="Metiers" id="jobs">
-    <datalist id="Metiers">
+    <label >Métier exercé</label>
+    <select name="Metiers" id="Jobs">
         <option value="Developpeur Web">Developpeur Web</option>
         <option value="Concepteur développeur d'applications">Concepteur développeur d'applications</option>
         <option value="Administrateur serveur">Administrateur serveur</option>
         <option value="Architect réseaux">Architect réseaux</option>
         <option value="Chef de Projet">Chef de Projet</option>
     </select>
-</input>
 </div>
 <!-- NATIONALITE -->
 <div>
-    <h4>Nationalité</h4>
+    <label >Nationalité</label>
     
     <select name="Nationalite" id="Natio">
         <option value="AFG">Afghane</option>
@@ -274,13 +274,13 @@
 
 <!-- PAYS -->
 <div>
-    <h4>Date de naissance</h4>
-    <h6> vous devez avoir plus de 13ans pour vous inscrire !</h6>
+    <label >Date de naissance (vous devez avoir plus de 13ans pour vous inscrire !)</label>
+    <br/>
     <input type="date" required name="BirthDate" min="1991-08-06" max="2008-01-01">
 </div>
 
 <div>
-    <h4>Pays de naissance</h4>
+    <label >Pays de naissance</label>
 
     <select name="Pays" id="Cntry">
         <option value="Afganistan">Afghanistan</option>
@@ -534,24 +534,27 @@
 
 
 <div>
-    <h4>Numéro de sécurité social</h4>
-    <input type="text" name="CodeSecu" required pattern="[0-9]+"  maxlength="13">
+    <label >Numéro de sécurité social</label>
+    <input type="text" name="CodeSecu" required pattern="[0-9]+"  minlength ="13" maxlength="13">
 </div>
 
 <div>
-    <h4>Numéro de passeport</h4>
-    <input type="text" name="PasseportNum" required pattern="[0-9A-Za-z]+"  maxlength="9">
+    <label >Numéro de passeport</label>
+    <input type="text" name="PasseportNum" required pattern="[0-9]+" minlength="2" maxlength="2">
+    <input type="text" name="PasseportNum" required pattern="[A-Za-z]+" minlength="2" maxlength="2">
+    <input type="text" name="PasseportNum" required pattern="[0-9]+" minlength="5" maxlength="5">
 </div>
 <div>
-    <h4>Date de délivrance du passeport</h4>
-    <input type="date" required name="PassportDedivvDate">
+    <label >Date de délivrance du passeport</label>
+    <input type="date" id="pdd" required name="PassportDevDate">
 </div>
 
 <div>
-    <h4>Date de validitée du passeport</h4>
-    <input type="date" required name="PasseportValDate">
+    <label >Date de validitée du passeport</label>
+    <input type="date" required id="pvd" name="PasseportValDate">
 </div>
-<input type="submit" value="Confirmer">
+<div><input type="submit" value="Confirmer"></div>
+
 </form>
 </body>
 </html>
